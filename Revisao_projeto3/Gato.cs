@@ -30,12 +30,24 @@ namespace Revisao_projeto3
 
         public void AdicionarEntrada()
         {
-
+            Console.Clear();
+            Console.WriteLine($"Entrada de {nome}");
+            Console.Write("Digite a quantidade de entrada: ");
+            int estoque = int.Parse(Console.ReadLine());
+            quantidade += estoque;
+            Console.WriteLine("Entrada efetuada com sucesso!");
+            Console.ReadLine();
         }
 
         public void AdicionarSaida()
         {
-
+            Console.Clear();
+            Console.WriteLine($"Saída de {nome}");
+            Console.Write("Digite a quantidade de saída: ");
+            int estoque = int.Parse(Console.ReadLine());
+            quantidade -= estoque;
+            Console.WriteLine("Saída efetuada com sucesso!");
+            Console.ReadLine();
         }
     }
 }
