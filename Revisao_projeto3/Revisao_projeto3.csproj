@@ -48,9 +48,7 @@
     <Compile Include="Gato.cs" />
     <Compile Include="IAnimals.cs" />
     <Compile Include="OutroAnimal.cs" />
-    <Compile Include="..\..\..\..\Desktop\Program.cs">
-      <Link>Program.cs</Link>
-    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
