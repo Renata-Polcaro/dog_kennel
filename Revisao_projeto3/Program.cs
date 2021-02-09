@@ -39,8 +39,10 @@ namespace Revisao_projeto3
                             Remover();
                             break;
                         case Menu.Entrada:
+                            Entrada();
                             break;
                         case Menu.Saida:
+                            Saida();
                             break;
                         case Menu.Sair:
                             sair = true;
@@ -125,7 +127,7 @@ namespace Revisao_projeto3
             }
             catch
             {
-
+                Console.WriteLine("Opção Incorreta!");
             }
         }
 
@@ -153,7 +155,7 @@ namespace Revisao_projeto3
             }
             catch
             {
-
+                Console.WriteLine("Opção Incorreta!");
             }
         }
 
@@ -183,7 +185,7 @@ namespace Revisao_projeto3
             }
             catch
             {
-
+                Console.WriteLine("Opção Incorreta!");
             }
         }
 
@@ -248,7 +250,67 @@ namespace Revisao_projeto3
             }
             catch
             {
+                Console.WriteLine("ID incorreto!");
+            }
+        }
 
+        static void Entrada()
+        {
+            Listagem();
+            Console.Write("Informe o ID que gostaria de efetuar a entrada: ");
+            int id = int.Parse(Console.ReadLine());
+            try
+            {
+                if(id >= 0 && id < animais.Count)
+                {
+                    animais[id].AdicionarEntrada();
+                    Salvar();
+                }
+                else
+                {
+                    Console.WriteLine("ID incorreto!");
+
+                }
+                Console.Write("Gostaria de efetuar outra entrada? 'S' para Sim e 'N' para não: ");
+                char opcao = char.Parse(Console.ReadLine());
+                if (opcao == 'S' || opcao == 's')
+                {
+                    Entrada();
+                }
+            }
+            catch
+            {
+                Console.WriteLine("ID incorreto!");
+            }
+        }
+
+        static void Saida()
+        {
+            Listagem();
+            Console.Write("Informe o ID que gostaria de efetuar a saída/baixa: ");
+            int id = int.Parse(Console.ReadLine());
+            try
+            {
+                if (id >= 0 && id < animais.Count)
+                {
+                    animais[id].AdicionarSaida();
+                    Salvar();
+                }
+                else
+                {
+                    Console.WriteLine("ID incorreto!");
+
+                }
+                Console.Write("Gostaria de efetuar outra entrada? 'S' para Sim e 'N' para não: ");
+                char opcao = char.Parse(Console.ReadLine());
+                if (opcao == 'S' || opcao == 's')
+                {
+                    Saida();
+                }
+            }
+            catch
+            {
+                Console.WriteLine("ID incorreto!");
             }
         }
     }

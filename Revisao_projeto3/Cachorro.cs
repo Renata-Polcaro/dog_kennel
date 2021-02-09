@@ -30,8 +30,8 @@ namespace Revisao_projeto3
 
         public void AdicionarEntrada()
         {
-            Console.Clear();
-            Console.WriteLine($"Entrada de {nome}");
+           // Console.Clear();
+           // Console.WriteLine($"Entrada de {nome}");
             Console.Write("Digite a quantidade de entrada: ");
             int estoque = int.Parse(Console.ReadLine());
             quantidade += estoque;
@@ -41,8 +41,8 @@ namespace Revisao_projeto3
 
         public void AdicionarSaida()
         {
-            Console.Clear();
-            Console.WriteLine($"Saída de {nome}");
+            //Console.Clear();
+           // Console.WriteLine($"Saída de {nome}");
             Console.Write("Digite a quantidade de saída: ");
             int estoque = int.Parse(Console.ReadLine());
             quantidade -= estoque;
